@@ -1,0 +1,3 @@
+Find env address in gdb 
+
+x/s *((char **)environ)  (after running the programm)
