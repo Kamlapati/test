@@ -15,3 +15,7 @@ git push -u origin master
 git remote add origin https://github.com/Kamlapati/test.git
 git push -u origin master
 ```
+### find the version of python module 
+$ pip freeze | grep module_name
+lxml==2.3
+$ python -c "import module_name; print module_name.__version__"
