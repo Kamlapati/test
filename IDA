@@ -1,3 +1,5 @@
 IDA 
 
 1) File-> Load FILE -> FLIRT  (stripped statically linked executables)
+
+Shift+F2 (For IDC)
