@@ -2,8 +2,10 @@ IDA
 
 1) File-> Load FILE -> FLIRT  (stripped statically linked executables)
 
+2) Shortcuts
 Shift+F2 (For IDC)
 
+3) Functions:
 ------------------------------------------------------------------
 Functions                    Return Value
 ------------------------------------------------------------------
@@ -23,6 +25,16 @@ idautils.Functions(start_addr,end_addr)   Array containing start addresses of ea
 idc.GetFunctionName(address)              Return function at "address". "address" can be anywhere within the function boundaries.
 
 
+----------------------------------------------------------
+Functions                    Return Value
+----------------------------------------------------------
+idc.GetDisasm(address)  Get the diassmbled code at "address"
+idc.GetMnem(address)    Get Mnemonic at "address"
+idc.GetOpnd(address,n)  Get "n" operand at "address"
+
+
+4) Example cods:
+
 [Code to Find all the Segment:]
 for seg in idautils.Segments():
     #print(seg)
@@ -30,9 +42,4 @@ for seg in idautils.Segments():
     
     
     
-----------------------------------------------------------
-Functions                    Return Value
-----------------------------------------------------------
-idc.GetDisasm(address)  Get the diassmbled code at "address"
-idc.GetMnem(address)    Get Mnemonic at "address"
-idc.GetOpnd(address,n)  Get "n" operand at "address"
+
