@@ -4,20 +4,28 @@ IDA
 
 Shift+F2 (For IDC)
 
-----------------------------------------------------------
+------------------------------------------------------------------
 Functions                    Return Value
-----------------------------------------------------------
+------------------------------------------------------------------
 idc.ScreenEA()          address of the focused location from "IDA VIEW" in decimal.
 idc.SegName(address)    Find the segment name in which "address" is present.
-idautils.Segments()     array  address of all the segments present in the file
+idautils.Segments()     Array containing address of all the segments present in the file
+idc.SegStart(address)   Find the Segment start address. "address" can be nay address within the segment.
+idc.SegEnd(address)     Find the Segment end address. "address" can be nay address within the segment.
+idc.NextSeg(address)    "address" can be nay address within the segment. Find the next segment address.
+idc.SegByName(segname)  Find the address of the segment by th segment name (segname).
 
-
-
+-----------------------------------------------------------------------
+Functions                          Return Value
+------------------------------------------------------------------------
+idautils.Functions()                      Array containing start addresses of each function present in the code.
+idautils.Functions(start_addr,end_addr)   Array containing start addresses of each function present in the given range.
+idc.GetFunctionName(address)              Return function at "address". "address" can be anywhere within the function boundaries.
 
 
 [Code to Find all the Segment:]
 for seg in idautils.Segments():
-    print(seg)
+    #print(seg)
     print (idc.SegName(seg), idc.SegStart(seg), idc.SegEnd(seg))
     
     
