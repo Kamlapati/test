@@ -21,10 +21,13 @@ idc.SegByName(segname)  Find the address of the segment by th segment name (segn
 Functions                          Return Value
 ------------------------------------------------------------------------
 idautils.Functions()                      Array containing start addresses of each function present in the code.
-idautils.Functions(start_addr,end_addr)   Array containing start addresses of each function present in the given range.
-idc.GetFunctionName(address)              Return function at "address". "address" can be anywhere within the function boundaries.
-idc.NextFucntion(address)                 Return th next function address
-idc.PrevFunction(address)                 Return the previous function address
+idautils.Functions(start_addr, end_addr)  Array containing start addresses of each function present in the given range.
+idc.GetFunctionName(address)              Returns function at "address". "address" can be anywhere within the function boundaries.
+idc.NextFucntion(address)                 Returns th next function address
+idc.PrevFunction(address)                 Returns the previous function address
+idc.GetFunctionAttr(address, attr)        Get the attribute (atr=[FUNCATTR_START, FUNCATTR_END])
+idc.GetFunctionFlags(address)             returns flag .(flag=[FUNC_NORET,FUNC_FAR,FUNC_LIB,FUNC_STATIC,FUNC_FRAME,
+                                                         FUNC_USERFAR, FUNC_HIDDEN, FUNC_THUNK, FUNC_BOTTOMBP])
 idaapi.get_func(address)                  Class of the function.
 
 
@@ -54,7 +57,7 @@ for func in idautils.Functions():
     print(hex(func), idc.GetFunctionName(func))
     
     
-[Code to disassmble of a function]
+[Code to disassemble of a function]
 ea = here()     # return address at the focused location
 start = idc.GetFunctionAttr(ea,FUNCATTR_START)     # find the start address
 end = idc.GetFunctionAttr(ea,FUNCATTR_END)         # find the end address
@@ -62,6 +65,30 @@ cur_addr = start
 while cur_addr <=end:
     print hex(cur_addr), idc.GetDisasm(cur_addr)  # print instrunction
     cur_addr = idc.NextHead(cur_addr,end)         # jump to next instruction
+    
+    
+[code to find properties of all the function]
+for func in idautils.Functions():
+   flags=idc.GetFunctionFlags(func)
+   print (idc.GetFunctionName(func))
+   if flags & FUNC_NORET:
+      print "FUNC_NORET"
+   if flags & FUNC_FAR:
+      print "FUNC_FAR"
+   if flags & FUNC_LIB:
+      print "FUNC_LIB"
+   if flags & FUNC_STATIC:
+      print "FUNC_STATIC"
+   if flags & FUNC_FRAME:
+      print "FUNC_FRAME"
+   if flags & FUNC_USERFAR:
+      print "FUNC_USERFAR"
+   if flags & FUNC_HIDDEN:
+      print "FUNC_HIDDEN"
+   if flags & FUNC_THUNK:
+      print "FUNC_THUNK"
+   if flags & FUNC_BOTTOMBP:
+      print "FUNC_BOTTOMBP"
 
 
 
