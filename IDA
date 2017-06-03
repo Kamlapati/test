@@ -3,3 +3,28 @@ IDA
 1) File-> Load FILE -> FLIRT  (stripped statically linked executables)
 
 Shift+F2 (For IDC)
+
+----------------------------------------------------------
+Functions                    Return Value
+----------------------------------------------------------
+idc.ScreenEA()          address of the focused location from "IDA VIEW" in decimal.
+idc.SegName(address)    Find the segment name in which "address" is present.
+idautils.Segments()     array  address of all the segments present in the file
+
+
+
+
+
+[Code to Find all the Segment:]
+for seg in idautils.Segments():
+    print(seg)
+    print (idc.SegName(seg), idc.SegStart(seg), idc.SegEnd(seg))
+    
+    
+    
+----------------------------------------------------------
+Functions                    Return Value
+----------------------------------------------------------
+idc.GetDisasm(address)  Get the diassmbled code at "address"
+idc.GetMnem(address)    Get Mnemonic at "address"
+idc.GetOpnd(address,n)  Get "n" operand at "address"
