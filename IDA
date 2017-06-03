@@ -3,7 +3,7 @@ IDA
 1) File-> Load FILE -> FLIRT  (stripped statically linked executables)
 
 2) Shortcuts
-Shift+F2 (For IDC)
+Shift+F2 (For IDC Console)
 
 3) Functions:
 ------------------------------------------------------------------
@@ -23,6 +23,9 @@ Functions                          Return Value
 idautils.Functions()                      Array containing start addresses of each function present in the code.
 idautils.Functions(start_addr,end_addr)   Array containing start addresses of each function present in the given range.
 idc.GetFunctionName(address)              Return function at "address". "address" can be anywhere within the function boundaries.
+idc.NextFucntion(address)                 Return th next function address
+idc.PrevFunction(address)                 Return the previous function address
+idaapi.get_func(address)                  Class of the function.
 
 
 ----------------------------------------------------------
@@ -33,13 +36,35 @@ idc.GetMnem(address)    Get Mnemonic at "address"
 idc.GetOpnd(address,n)  Get "n" operand at "address"
 
 
-4) Example cods:
+4) Tips
+
+[find attributes and function name of the class]
+python>dir(objecName)
+
+5) Example cods:
 
 [Code to Find all the Segment:]
 for seg in idautils.Segments():
     #print(seg)
     print (idc.SegName(seg), idc.SegStart(seg), idc.SegEnd(seg))
+
+
+[Find all the functions in the code]
+for func in idautils.Functions():
+    print(hex(func), idc.GetFunctionName(func))
     
+    
+[Code to disassmble of a function]
+ea = here()     # return address at the focused location
+start = idc.GetFunctionAttr(ea,FUNCATTR_START)     # find the start address
+end = idc.GetFunctionAttr(ea,FUNCATTR_END)         # find the end address
+cur_addr = start
+while cur_addr <=end:
+    print hex(cur_addr), idc.GetDisasm(cur_addr)  # print instrunction
+    cur_addr = idc.NextHead(cur_addr,end)         # jump to next instruction
+
+
+
     
     
 
