@@ -40,6 +40,7 @@ idc.GetOpType(addr, n)                    get optype of operand n (starts with 0
 idc.GetOperandValue(addr,n)               get the value of operand n
 idc.OpOff(addr, n, base)                  to convertthe operand to an offset. The first argument ea is the address, n is the operand index
                                           and base is the base address.
+ idc.LocByName(func_name)		  get the address of the API "func_name"
 idaapi.get_func(address)                  Class of the function.
 
 
