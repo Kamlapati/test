@@ -5,6 +5,8 @@ IDA
 2) Shortcuts
 Shift+F2 (For IDC Console)
 
+
+
 3) Functions:
 ------------------------------------------------------------------
 Functions                    Return Value
@@ -34,6 +36,10 @@ idc.NextHead(address)                     get the start of the next instruction
 idc.PrevHead(ea)                          get the previous instruction address.
 idc.NextAddr(ea)                          get the next address.
 idc.PrevAddr(ea)                          get the previous address
+idc.GetOpType(addr, n)                    get optype of operand n (starts with 0)
+idc.GetOperandValue(addr,n)               get the value of operand n
+idc.OpOff(addr, n, base)                  to convertthe operand to an offset. The first argument ea is the address, n is the operand index
+                                          and base is the base address.
 idaapi.get_func(address)                  Class of the function.
 
 
@@ -160,5 +166,18 @@ for func in idautils.Functions():
             if op == o_reg:
                 print "0x%x %s"%(line, idc.GetDisasm(line)) 
     
-    
+[Change offset addresst to string]
+min = MinEA()
+max = MaxEA()
+def change_offset_addr_to_name():
+	for func in idautils.Functions():
+		flags = idc.GetFunctionFlags(func)
+		if flags & FUNC_LIB or flags & FUNC_THUNK:
+			continue
+		dism_addr = list(idautils.FuncItems(func))
+		for cur_addr in dism_addr:
+			if idc.GetOpType(cur_addr,0) == 5 and (min < idc.GetOperandValue(cur_addr,0)< max):  # o_imm=5
+				idc.OpOff(cur_addr,0,0)
+			if idc.GetOpType(cur_addr,1) == 5 and (min < idc.GetOperandValue(cur_addr,1)< max):  # o_imm=5
+				idc.OpOff(cur_addr,1,0)
 
