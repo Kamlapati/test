@@ -1,0 +1,4 @@
+
+
+# Setting no proxy for "host"
+os.environ['NO_PROXY'] = host
