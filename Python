@@ -23,5 +23,6 @@ response = requests.request(method, url, **kwargs)
   
 # response contains:
   * content - Content of the response, in bytes.
-  *
+  * status_code - status code of the response (e.g., 200, 404,301)
+  * headers  -  headers of the response
   
