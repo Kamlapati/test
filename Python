@@ -2,3 +2,26 @@
 
 # Setting no proxy for "host"
 os.environ['NO_PROXY'] = host
+
+--------------------------------------------------------------------------------------------------------------------
+
+requests library
+________________
+
+
+# General Format
+response = requests.request(method, url, **kwargs)
+
+#The optional arguments:
+  * params -- (GET) Dictionary or bytes to be sent in the query string for the Request.
+  * data -- (POST) Dictionary or list of tuples [(key, value)] (will be form-encoded), bytes, 
+              or file-like object to send in the body of the Request.
+  * Headers --  Dictionary of HTTP Headers to send with the Request.
+  * verify --  Either a boolean, in which case it controls whether we verify the server's 
+              TLS certificate, or a string, in which case it must be a path to a CA bundle to use. Defaults to True.
+  * allow_redirects (bool) -- Boolean. Enable/disable GET/OPTIONS/POST/PUT/PATCH/DELETE/HEAD redirection. Defaults to True.
+  
+# response contains:
+  * content - Content of the response, in bytes.
+  *
+  
