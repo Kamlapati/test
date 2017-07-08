@@ -1,0 +1,3 @@
+
+Install using-
+$setup-x86_64.exe -q -P wget,tar,qwak,bzip2,subversion,vim
