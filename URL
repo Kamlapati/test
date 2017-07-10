@@ -36,7 +36,11 @@ https://googleprojectzero.blogspot.ca/2015/06/what-is-good-memory-corruption.htm
    
  (Reverse)
    http://reversing.kr/
+ 
+ (Pwn)
 
+ 
 [Github]
- (pwntool writeups)
-  https://github.com/Gallopsled/pwntools-write-ups
+ {pwntool writeups:https://github.com/Gallopsled/pwntools-write-ups,
+  pwn_linux_training: https://github.com/scwuaptx/HITCON-Training,
+  }
