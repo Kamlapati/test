@@ -3,44 +3,40 @@
 http://united-locksmith.net/blog/7-best-practice-locks-for-beginners?utm_content=buffer91448&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
 
 
-[Exploit Edge pwn20wn]
-http://webcache.googleusercontent.com/search?q=cache:SAtCpHfqagwJ:weibo.com/ttarticle/p/show%3Fid%3D2309404105928097034074+&cd=1&hl=en&ct=clnk
-
-[Vmware exploit P20]
-http://acez.re/the-weak-bug-exploiting-a-heap-overflow-in-vmware/
-
 [VA]
-https://korelogic.com/resources.html#advisories
+{
+ P2O_exploit_edge: http://webcache.googleusercontent.com/search?q=cache:SAtCpHfqagwJ:weibo.com/ttarticle/p/show%3Fid%3D2309404105928097034074+&cd=1&hl=en&ct=clnk
+ P20_wxploit_VM_:http://acez.re/the-weak-bug-exploiting-a-heap-overflow-in-vmware/
+}
 
+
+[Blogs]
+{
+   https://sensepost.com/blog/2016/
+}
+
+[Good read]
+ {
+  Memory_corruption_List:https://googleprojectzero.blogspot.ca/2015/06/what-is-good-memory-corruption.html
+  Heap_pdf_bbok: https://heap-exploitation.dhavalkapil.com/
+
+ }
 
 [CTF]
-(Unsafe unlink)
-https://bannsecurity.com/index.php/home/10-ctf-writeups/43-defcon-2017-beatmeonthedl?showall=1&limitstart=
-
-[DOme]
-https://sensepost.com/blog/2016/
-
-[Del]
-http://mylotus.pw/Download/LOTUS/
-
-[Heap PDF BOOK]
-https://heap-exploitation.dhavalkapil.com/
-
-[Google 0 guys Memory Corruption vulns explanation]
-https://googleprojectzero.blogspot.ca/2015/06/what-is-good-memory-corruption.html
-
-
-[CTF Links]
-   https://ctf.katsudon.org/ctf4u/
-   https://pastebin.com/uyifxgPu
-   
- (Reverse)
-   http://reversing.kr/
- 
- (Pwn)
-
+ {
+   CTF_problems_list_with_writeups:https://ctf.katsudon.org/ctf4u/,
+   CTF_chall_list:https://pastebin.com/uyifxgPu,
+   Reverse_training:http://reversing.kr/
+   DEFCON_2017_Beatmeonthedl(unsafe unlink):https://bannsecurity.com/index.php/home/10-ctf-writeups/43-defcon-2017-beatmeonthedl?showall=1&limitstart=
+}
  
 [Github]
- {pwntool writeups:https://github.com/Gallopsled/pwntools-write-ups,
+ {
+  pwntool writeups:https://github.com/Gallopsled/pwntools-write-ups,
   pwn_linux_training: https://github.com/scwuaptx/HITCON-Training,
-  }
+  pwn_training:https://github.com/Caesurus/how2fsb, 
+ }
+
+
+[Random]
+http://mylotus.pw/Download/LOTUS/
