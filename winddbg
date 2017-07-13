@@ -1,0 +1,3 @@
+#print data
+
+bu address “.echo random_var_NAME;dc poi(esp+0c);gc”
