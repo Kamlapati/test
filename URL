@@ -10,9 +10,23 @@ http://united-locksmith.net/blog/7-best-practice-locks-for-beginners?utm_content
 }
 
 
+Advisories + PoCs{
+ linux_libs: https://blogs.gentoo.org/ago/advisories/
+ mr_me: http://srcincite.io/advisories/
+ COSIG: https://cosig.gouv.qc.ca/en/advisory/
+ Siberas:https://www.siberas.de/en/advisories.html
+ Payatu: http://payatu.com/advisory/
+    http://www.swiecki.net/research.html
+    http://leucosite.com/
+    https://marcograss.github.io/
+    http://www.security-assessment.com/  
+       
+}
+
 [Blogs]
 {
    https://sensepost.com/blog/2016/
+   http://paper.seebug.org/
 }
 
 [Good read]
