@@ -1,14 +1,6 @@
-#Sample program
+#PMA
 
-#####create a new repository on the command line
-```
-echo "# test" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/Kamlapati/test.git
-git push -u origin master
-```
+Packed and obfuscated code will often include at least the functions LoadLibrary and GetProcAddress, which are used to load and gain access to additional functions.
 
 ##### push an existing repository from the command line
 ```
