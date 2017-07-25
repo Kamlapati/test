@@ -26,3 +26,11 @@ response = requests.request(method, url, **kwargs)
   * status_code - status code of the response (e.g., 200, 404,301)
   * headers  -  headers of the response
   
+  
+  
+  
+  
+# convert to Ascii to unicode
+s = uri
+uri_hex = "00".join("{:02x}".format(ord(c)) for c in s)
+
