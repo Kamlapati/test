@@ -124,23 +124,28 @@ o_displ:  This operand is returned if the operand consists of registers and a di
 5) Example cods:
 ...........................................................
 [Code to Find all the Segment:]
+```
 for seg in idautils.Segments():
     #print(seg)
     print (idc.SegName(seg), idc.SegStart(seg), idc.SegEnd(seg))
-
+```
 ............................................................
 [Find all the functions in the code]
+```
 for func in idautils.Functions():
     print(hex(func), idc.GetFunctionName(func))
-    
+```    
 ...............................................................    
 [Code to disassemble of a function]
 [Example-1]
+```
 dism_addr = list(idautils.FuncItems(here()))
 for line in dism_addr:
     print hex(line), idc.GetDisasm(line)
+```
 
 [Example-2]
+```
 ea = here()     # return address at the focused location
 start = idc.GetFunctionAttr(ea,FUNCATTR_START)     # find the start address
 end = idc.GetFunctionAttr(ea,FUNCATTR_END)         # find the end address
@@ -148,9 +153,10 @@ cur_addr = start
 while cur_addr <=end:
     print hex(cur_addr), idc.GetDisasm(cur_addr)  # print instrunction
     cur_addr = idc.NextHead(cur_addr,end)         # jump to next instruction
-    
+```    
 ...............................................................................    
 [code to find properties of all the function]
+```
 for func in idautils.Functions():
    flags=idc.GetFunctionFlags(func)
    print (idc.GetFunctionName(func))
@@ -172,9 +178,10 @@ for func in idautils.Functions():
       print "FUNC_THUNK"
    if flags & FUNC_BOTTOMBP:
       print "FUNC_BOTTOMBP"
-
+```
 
 [Find dynamic calls addresses]
+```
 import idautils
 for func in idautils.Functions():
     flags = idc.GetFunctionFlags(func)
@@ -187,8 +194,9 @@ for func in idautils.Functions():
             op = idc.GetOpType(line,0)
             if op == o_reg:
                 print "0x%x %s"%(line, idc.GetDisasm(line)) 
-    
+ ```   
 [Change offset addresst to string]
+```
 min = MinEA()
 max = MaxEA()
 def change_offset_addr_to_name():
@@ -202,6 +210,25 @@ def change_offset_addr_to_name():
 				idc.OpOff(cur_addr,0,0)
 			if idc.GetOpType(cur_addr,1) == 5 and (min < idc.GetOperandValue(cur_addr,1)< max):  # o_imm=5
 				idc.OpOff(cur_addr,1,0)
+```				
 [write bytes]
+```
 f = open('c:\\users\\filPath', 'wb').write(GetManyBytes(0x6529B0, 0x1f8))
+```
+[finde Xref of Functions]
+```
+from idaapi import *
+
+dng_func = ["strcpy","fun_404050_theMainEvent","strncpy"]
+
+for f in dng_func:
+   addr = LocByName(f)
+   if addr != BADADDR:
+      c_refs = CodeRefsTo(addr,0)
+      print "Cross_Refs"
+      print "----------"
+      for x in c_refs:
+         print ("%08x" %x)
+         SetColor(x,CIC_ITEM,0xf52fff)
+```
 
