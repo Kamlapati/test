@@ -202,4 +202,6 @@ def change_offset_addr_to_name():
 				idc.OpOff(cur_addr,0,0)
 			if idc.GetOpType(cur_addr,1) == 5 and (min < idc.GetOperandValue(cur_addr,1)< max):  # o_imm=5
 				idc.OpOff(cur_addr,1,0)
+[write bytes]
+f = open('c:\\users\\filPath', 'wb').write(GetManyBytes(0x6529B0, 0x1f8))
 
