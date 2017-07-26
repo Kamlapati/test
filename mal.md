@@ -9,7 +9,8 @@
  
 | Tools                      | Descriptions                                     | 
 | -------------------------- |:------------------------------------------------:| 
-|Dependency Walker           | Dynamically lined functions                                    | 
+|Dependency Walker           | Dynamically linked functions                                  | 
+
  
  #### Process Hollowing
  
@@ -23,7 +24,7 @@ or
 funcptr = GetProcAddress(handle, "ZwUnmapViewOfSection"));
 ```
 
-#####VirtualAllocEx function
+##### VirtualAllocEx function
 ```
 LPVOID WINAPI VirtualAllocEx(
   _In_     HANDLE hProcess,
@@ -37,7 +38,7 @@ If the function succeeds, the return value is the base address of the allocated 
 If the function fails, the return value is NULL
 
 
-#####WriteProcessMemory function
+##### WriteProcessMemory function
 Writes data to an area of memory in a specified process. 
 ```
 BOOL WINAPI WriteProcessMemory(
@@ -49,3 +50,6 @@ BOOL WINAPI WriteProcessMemory(
 );
 ```
 If the function succeeds, the return value is nonzero.
+
+* SetWindowsHookEx * - way that keyloggers receive keyboard inputs
+
