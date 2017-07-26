@@ -1,5 +1,5 @@
  
- ####Linked Librariers
+####Linked Librariers
  1. runtime linking is commonly used in malware
  2. LoadLibrary, GetProcAddress, LdrGetProcAddress, and LdrLoadDll Microsoft Windows functions allow programmers to import linked functions not listed in a program’s file header.
  
