@@ -10,6 +10,9 @@
 | Tools                      | Descriptions                                     | 
 | -------------------------- |:------------------------------------------------:| 
 |Dependency Walker           | Dynamically linked functions                                  | 
+|ApateDNS                    | Faking Network                                   |
+|
+|
 
  ##### Run DLL
  
@@ -26,7 +29,7 @@
  ```
  net start ServiceName
  ```
- 
+ ApateDNS
  #### Process Hollowing
  
  NtUnmapViewOfSection and ZwUnmapViewOfSection are two versions of the same Windows Native System Services routine. 
