@@ -11,7 +11,7 @@
 | -------------------------- |:------------------------------------------------:| 
 |Dependency Walker           | Dynamically linked functions                                  | 
 
- ###### Run DLL
+ ##### Run DLL
  
  ```
  rundll32.exe DLLname, Export arguments
@@ -22,7 +22,7 @@
  rundll32.exe xyzzy.dll, #5
  ```
  
-############ net start command is used to start a service on a Windows system.
+###### net start command is used to start a service on a Windows system.
  ```
  net start ServiceName
  ```
