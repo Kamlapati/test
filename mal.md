@@ -11,6 +11,21 @@
 | -------------------------- |:------------------------------------------------:| 
 |Dependency Walker           | Dynamically linked functions                                  | 
 
+ ###### Run DLL
+ 
+ ```
+ rundll32.exe DLLname, Export arguments
+ ```
+ The Export value must be a function name or ordinal selected from the exported function table in the DLL. 
+ ```
+ rundll32.exe rip.dll, Install
+ rundll32.exe xyzzy.dll, #5
+ ```
+ 
+############ net start command is used to start a service on a Windows system.
+ ```
+ net start ServiceName
+ ```
  
  #### Process Hollowing
  
