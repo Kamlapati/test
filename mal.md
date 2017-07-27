@@ -11,7 +11,7 @@
 | -------------------------- |:------------------------------------------------:| 
 |Dependency Walker           | Dynamically linked functions                                  | 
 |ApateDNS                    | Faking Network                                   |
-|
+|INetSim                     | To simulating common Internet services (Linux)   |
 |
 
  ##### Run DLL
