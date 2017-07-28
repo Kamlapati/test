@@ -30,11 +30,45 @@
  net start ServiceName
  ```
 #### OPcode
-'``
-    pusha pushes the 16-bit registers on the stack in the following order: AX, CX, DX, BX, SP, BP, SI, DI.
+    * pusha * pushes the 16-bit registers on the stack in the following order: AX, CX, DX, BX, SP, BP, SI, DI.
+    * pushad * pushes the 32-bit registers on the stack in the following order: EAX, ECX, EDX, EBX, ESP, EBP, ESI, EDI.
+    
+ ```
+ jz loc : Jump to specified location if ZF = 1.
 
-    pushad pushes the 32-bit registers on the stack in the following order: EAX, ECX, EDX, EBX, ESP, EBP, ESI, EDI.
-```
+jnz loc : Jump to specified location if ZF = 0.
+
+je loc : Same as jz, but commonly used after a cmp instruction. Jump will occur if the destination operand equals the source operand.
+
+jne loc : Same as jnz, but commonly used after a cmp. Jump will occur if the destination operand is not equal to the source operand.
+
+jg loc : Performs signed comparison jump after a cmp if the destination operand is greater than the source operand.
+
+jge loc  : Performs signed comparison jump after a cmp if the destination operand is greater than or equal to the source operand.
+
+ja loc : Same as jg, but an unsigned comparison is performed.
+
+jae loc :Same as jge, but an unsigned comparison is performed.
+
+jl loc : Performs signed comparison jump after a cmp if the destination operand is less than the source operand.
+
+jle loc : Performs signed comparison jump after a cmp if the destination operand is less than or equal to the source operand.
+
+jb loc : Same as jl, but an unsigned comparison is performed.
+
+jbe loc : Same as jle, but an unsigned comparison is performed.
+
+jo loc :Jump if the previous instruction set the overflow flag (OF = 1).
+
+js loc : Jump if the sign flag is set (SF = 1).
+
+jecxz loc : Jump to location if ECX = 0.
+ 
+ ```
+ 
+ 
+ 
+ 
  #### Process Hollowing
  
  NtUnmapViewOfSection and ZwUnmapViewOfSection are two versions of the same Windows Native System Services routine. 
