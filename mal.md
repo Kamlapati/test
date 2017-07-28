@@ -30,8 +30,10 @@
  net start ServiceName
  ```
 #### OPcode
-    * pusha * pushes the 16-bit registers on the stack in the following order: AX, CX, DX, BX, SP, BP, SI, DI.
-    * pushad * pushes the 32-bit registers on the stack in the following order: EAX, ECX, EDX, EBX, ESP, EBP, ESI, EDI.
+    *pusha*  pushes the 16-bit registers on the stack in the following order: AX, CX, DX, BX, SP, BP, SI, DI.
+    *pushad*  pushes the 32-bit registers on the stack in the following order: EAX, ECX, EDX, EBX, ESP, EBP, ESI, EDI.
+    The *scasb* instruction is used to search for a single value in a sequence of bytes. The value is defined by the AL register.
+    
     
  ```
  jz loc : Jump to specified location if ZF = 1.
