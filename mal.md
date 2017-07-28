@@ -29,7 +29,12 @@
  ```
  net start ServiceName
  ```
- ApateDNS
+#### OPcode
+'``
+    pusha pushes the 16-bit registers on the stack in the following order: AX, CX, DX, BX, SP, BP, SI, DI.
+
+    pushad pushes the 32-bit registers on the stack in the following order: EAX, ECX, EDX, EBX, ESP, EBP, ESI, EDI.
+```
  #### Process Hollowing
  
  NtUnmapViewOfSection and ZwUnmapViewOfSection are two versions of the same Windows Native System Services routine. 
