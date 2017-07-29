@@ -55,6 +55,12 @@ Advisories + PoCs{
   pwn_training:https://github.com/Caesurus/how2fsb, 
  }
 
+[basic linux VM]
+{
+SSH
+tmux
+}
+
 
 [Random]
 http://mylotus.pw/Download/LOTUS/
