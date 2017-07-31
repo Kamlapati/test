@@ -48,6 +48,12 @@ Advisories + PoCs{
    Reverse_training:http://reversing.kr/
    DEFCON_2017_Beatmeonthedl(unsafe unlink):https://bannsecurity.com/index.php/home/10-ctf-writeups/43-defcon-2017-beatmeonthedl?showall=1&limitstart=
 }
+ Exercise 
+ {
+ UAF:https://sensepost.com/blog/2017/linux-heap-exploitation-intro-series-used-and-abused-use-after-free/
+ 
+ }
+ 
  
 [Github]
  {
