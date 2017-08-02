@@ -31,6 +31,7 @@ Advisories + PoCs{
    http://paper.seebug.org/
    news: https://xuanwulab.github.io/cn/secnews/2017/07/07/index.html
    UAF : https://sensepost.com/blog/2017/linux-heap-exploitation-intro-series-used-and-abused-use-after-free/
+   Hyper-V debugging : http://hvinternals.blogspot.ca/2015/10/hyper-v-debugging-for-beginners.html
 }
 
 [Good read]
