@@ -1,4 +1,6 @@
 
+
+
 ##### To read location
 ```
 dx addressToRead
@@ -39,3 +41,12 @@ Sometimes the driver object will have a different name or !drvobj will fail. As 
 ##### print data
 
 bu address “.echo random_var_NAME;dc poi(esp+0c);gc”
+
+
+#### Kernel Debugging net setting
+```
+bcdedit /dbgsettings net hostip:1.1.1.1 port:50000 key:1.12.3.1
+bcedit /set busparams num.num.num
+```
+
+
