@@ -231,4 +231,19 @@ for f in dng_func:
          print ("%08x" %x)
          SetColor(x,CIC_ITEM,0xf52fff)
 ```
+##### find all the instructions in a function with synrax 'mav eax num'
+```
+import idautils
 
+main_start_addr = 0x08048870
+dism_addr = list(idautils.FuncItems(main_start_addr))
+for line in dism_addr:
+   m = idc.GetMnem(line)
+   if m == 'mov':
+      op1 = idc.GetOpType(line,0)
+      op2 = idc.GetOpType(line,1)
+      operand1 = idc.GetOpnd(line,0)
+      #print(operand1)
+      if (op1 == o_reg) and (op2 == o_imm)  and (operand1 == "eax"):
+         print "0x%x %s"%(line, idc.GetDisasm(line)) 
+```
