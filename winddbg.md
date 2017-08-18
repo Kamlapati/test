@@ -49,4 +49,8 @@ bcdedit /dbgsettings net hostip:1.1.1.1 port:50000 key:1.12.3.1
 bcedit /set busparams num.num.num
 ```
 
+##### To find structure of heap, if page heap is enable 
+```
+dt _DPH_BLOCK_INFORMATION  
+```
 
