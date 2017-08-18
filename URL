@@ -53,6 +53,7 @@ Advisories + PoCs{
  Exercise 
  {
  UAF:https://sensepost.com/blog/2017/linux-heap-exploitation-intro-series-used-and-abused-use-after-free/
+ IDAPython:https://reverseengineering.stackexchange.com/questions/16055/idapython-get-xrefs-to-a-stack-variable
  
  }
  
