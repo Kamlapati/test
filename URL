@@ -41,7 +41,7 @@ Advisories + PoCs{
   Memory_corruption_List:https://googleprojectzero.blogspot.ca/2015/06/what-is-good-memory-corruption.html
   Heap_pdf_bbok: https://heap-exploitation.dhavalkapil.com/
   NAT_PPT_JavaScript : https://www.blackhat.com/docs/us-17/thursday/us-17-Silvanovich-The-Origin-Of-Array-Symbol-Species.pdf
-
+  Browser_security: https://browser-security.x41-dsec.de/X41-Browser-Security-White-Paper.pdf
  }
 
 [CTF]
