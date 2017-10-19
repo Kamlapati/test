@@ -1,4 +1,5 @@
 IDA Short cut
+
 bookmark feature in IDA	Pro (Alt+M to create, Ctrl+M to recall)	
 
 IDA 
