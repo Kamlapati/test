@@ -24,8 +24,11 @@ du dwo (esp+4)
 ```
 ln address
 ```
-
-
+##### *Examine symbols*
+```
+x l*!*                 ; diplay loaded module starts with "l"
+x/v module!symbol      ; verbose 
+```
 ##### find the driver object with the *!drvobj* command.
 ```
 ModLoad: f7b0d000 f7b0e780   FileWriter.sys
