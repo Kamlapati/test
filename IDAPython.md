@@ -251,3 +251,20 @@ for line in dism_addr:
       if (op1 == o_reg) and (op2 == o_imm)  and (operand1 == "eax"):
          print "0x%x %s"%(line, idc.GetDisasm(line)) 
 ```
+
+#### Search/find hex bytes
+```
+import idc
+import idaapi
+base = 0x0851 
+while True:
+  addr = FindBinary(base, SEARCH_DOWN, "83 BD B8 E1 FF FF",16);
+  if addr == 0x10FF5:
+    break
+
+  addr = addr+6
+  bytev = idc.GetManyBytes(addr,1)
+  print(bytev.encode("hex"))
+  base = addr
+
+```
