@@ -1,15 +1,14 @@
 
 
-# Setting no proxy for "host"
+#### Setting no proxy for "host"
+```
 os.environ['NO_PROXY'] = host
-
+```
 --------------------------------------------------------------------------------------------------------------------
 
-requests library
+### requests library
 ________________
-
-
-# General Format
+```
 response = requests.request(method, url, **kwargs)
 
 #The optional arguments:
@@ -25,18 +24,19 @@ response = requests.request(method, url, **kwargs)
   * content - Content of the response, in bytes.
   * status_code - status code of the response (e.g., 200, 404,301)
   * headers  -  headers of the response
+```  
   
   
   
   
-  
-# convert to Ascii to unicode
+#### convert to Ascii to unicode
+```
 s = uri
 uri_hex = "00".join("{:02x}".format(ord(c)) for c in s)
+```
+### Ctypes data
 
-#Ctypes data
-
-
+```
 C Type Python Type ctypes Type
 char 1-character string c_char
 wchar_t 1-character Unicode string c_wchar
@@ -55,3 +55,4 @@ double float c_double
 char * (NULL terminated) string or none c_char_p
 wchar_t * (NULL terminated) unicode or none c_wchar_p
 void * int/long or none c_void_p
+```
