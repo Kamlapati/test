@@ -23,6 +23,12 @@ idc.NextSeg(address)    "address" can be nay address within the segment. Find th
 idc.SegByName(segname)  Find the address of the segment by th segment name (segname).
 idautils.Segments()     Array containing address of all the segments present in the file
 
+****************************************************
+Rename funtions
+
+strname ="fun_10271D97_rtf_1"
+idc.MakeNameEx(addEA, strname, idc.SN_NOWARN)
+
 
 -----------------------------------------------------------------------
 Functions                          Return Value
