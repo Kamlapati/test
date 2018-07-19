@@ -13,9 +13,9 @@ Shift+F2 (For IDC Console)
 
 3) Functions:
 
-|                      |
-| Functions            |         Return Value
-|--------------------- |---------------------------------------------
+|                      |                                                                                      |
+| Functions            |         Return Value                                                                 |
+|_____________________ |______________________________________________________________________________________|
 |idc.ScreenEA()        |   address of the focused location from "IDA VIEW" in decimal.                        |
 |idc.SegName(address)  |   Find the segment name in which "address" is present.                               |
 |idc.SegStart(address) |   Find the Segment start address. "address" can be nay address within the segment.   | 
