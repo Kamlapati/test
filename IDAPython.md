@@ -12,16 +12,17 @@ Shift+F2 (For IDC Console)
 
 
 3) Functions:
-------------------------------------------------------------------
-Functions                    Return Value
-------------------------------------------------------------------
-idc.ScreenEA()          address of the focused location from "IDA VIEW" in decimal.
-idc.SegName(address)    Find the segment name in which "address" is present.
-idc.SegStart(address)   Find the Segment start address. "address" can be nay address within the segment.
-idc.SegEnd(address)     Find the Segment end address. "address" can be nay address within the segment.
-idc.NextSeg(address)    "address" can be nay address within the segment. Find the next segment address.
-idc.SegByName(segname)  Find the address of the segment by th segment name (segname).
-idautils.Segments()     Array containing address of all the segments present in the file
+
+|                      |
+| Functions            |         Return Value
+|--------------------- |---------------------------------------------
+|idc.ScreenEA()        |   address of the focused location from "IDA VIEW" in decimal.
+|idc.SegName(address)  |   Find the segment name in which "address" is present.
+|idc.SegStart(address) |   Find the Segment start address. "address" can be nay address within the segment.
+|idc.SegEnd(address)   |   Find the Segment end address. "address" can be nay address within the segment.
+|idc.NextSeg(address)  |   "address" can be nay address within the segment. Find the next segment address.
+|idc.SegByName(segname)|   Find the address of the segment by th segment name (segname).
+|idautils.Segments()   |   Array containing address of all the segments present in the file
 
 ****************************************************
 Rename funtions
